@@ -6,8 +6,10 @@ from dotenv import load_dotenv
 st.set_page_config(page_title="AcademiCare - AI Assistant")
 
 # Load environment variables
-load_dotenv()
-api_key = os.getenv("GROQ_API_KEY")
+# load_dotenv()
+# api_key = os.getenv("GROQ_API_KEY")
+
+api_key = st.secrets["GROQ_API_KEY"]
 
 client = Groq(api_key=api_key)
 
