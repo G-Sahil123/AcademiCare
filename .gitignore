@@ -1,0 +1,3 @@
+stenv/
+__pycache__/
+.env
