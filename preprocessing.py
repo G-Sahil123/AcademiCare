@@ -32,7 +32,7 @@ def preprocess_binary(df: pd.DataFrame) -> pd.DataFrame:
 
 def transform(df: pd.DataFrame)->pd.DataFrame:
 
-    encoder = joblib.load("catboost_encoder.pkl")
+    encoder = joblib.load("models/catboost_encoder.pkl")
 
     df_processed = preprocess_binary(df)
 
@@ -44,5 +44,4 @@ def transform(df: pd.DataFrame)->pd.DataFrame:
     df_processed[categorical_cols] = encoder.transform(df_processed[categorical_cols])
 
     return df_processed
-
 

@@ -1,3 +1,4 @@
-stenv/
-__pycache__/
+.streamlit/
+stuenv/
 .env
+__pycache__/

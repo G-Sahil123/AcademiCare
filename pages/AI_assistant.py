@@ -10,7 +10,6 @@ st.set_page_config(page_title="AcademiCare - AI Assistant")
 # api_key = os.getenv("GROQ_API_KEY")
 
 api_key = st.secrets["GROQ_API_KEY"]
-
 client = Groq(api_key=api_key)
 
 st.title("🤖 AI Assistant - AcademiCare")
@@ -36,7 +35,7 @@ if user_input:
         collected_response = ""
 
         completion = client.chat.completions.create(
-            model="llama3-70b-8192",
+            model="llama-3.3-70b-versatile",
             messages=st.session_state.messages,
             stream=True,
         )
