@@ -52,7 +52,7 @@ source stuenv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-4. Create the .streamlit folder and secrets.toml (do NOT commit this file):
+**4. Create the .streamlit folder and secrets.toml (do NOT commit this file):**
 ```bash
 mkdir .streamlit
 
